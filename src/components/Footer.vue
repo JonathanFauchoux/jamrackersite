@@ -4,7 +4,6 @@
       <div class="social-link">
         <p>© copyright 2020 JamRacker</p>
         <a href="https://github.com/JonathanFauchoux" target="_blank"><i class="fab fa-github-square"></i></a>
-      
         <a href="mailto:jonathan.fauchoux@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
       </div>
     </div>
