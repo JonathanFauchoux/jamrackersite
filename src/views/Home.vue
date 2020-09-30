@@ -32,7 +32,7 @@ export default {
 </script>
 
 <style lang="scss">
-
+@import '../assets/main.scss';
 .logo_container{
   object-fit: contain;
   height: 100vh;
@@ -45,7 +45,7 @@ export default {
 
 
 h1 {
-  color: black;
+  color: $secondary;
   margin-bottom: 20px;
 }
 

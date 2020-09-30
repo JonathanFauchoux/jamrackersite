@@ -14,6 +14,9 @@
 <script>
 import NavBar from './components/NavBar.vue'
 import Footer from './components/Footer.vue'
+
+
+
 export default {
   name: 'App',
   components: {
@@ -44,6 +47,7 @@ export default {
 </script>
 <style lang="scss">
 @import './assets/main.scss';
+
 *{
   margin: 0;
   padding: 0;
@@ -63,7 +67,7 @@ export default {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #159EDE;
+  background: $primary;
 }
 
 /* Handle on hover */
@@ -98,7 +102,7 @@ body{
 }
 
 main{
-  width: 50vw;
+  width: 70vw;
   margin-inline-start: auto;
   margin-inline-end: auto;
 }

@@ -2,7 +2,7 @@
   <footer class="footer">
     <div class="color">
       <div class="social-link">
-        <p>JamRacker © copyright 2020</p>
+        <p><span>Jam</span>Racker © copyright 2020</p>
         <div>
         <a href="https://github.com/JonathanFauchoux" target="_blank"><i class="fab fa-github-square"></i></a>
         <a href="mailto:jonathan.fauchoux@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
@@ -71,6 +71,10 @@ $secondary  : #606060;
           padding-top: .5rem;
           color :$secondary;
           font-size: 1rem;
+          span{
+            color: $primary;
+            font-weight: 600;
+          }
         }
         a{
            @media screen and (max-width: 767px){
