@@ -8,7 +8,9 @@
       </div>
  
       <ul class="nav-list">
-        <div class="logo">Logo</div>
+        <div class="logo">
+          <img src="../assets/jamrackerLogo.jpg" alt="logo">
+        </div>
         <router-link to="/" tag="li"  active-class="active" exact class="nav-item"><a class="nav-link">Home</a></router-link>
         <router-link to="/About" tag="li"  active-class="active" exact class="nav-item"><a class="nav-link">About</a></router-link>
         <router-link to="/Contact" tag="li" active-class="active" class="nav-item"><a class="nav-link">Contact</a></router-link>
@@ -25,29 +27,29 @@ export default {
     return {
       navbar : document.querySelector('.navbar'),
       isActive: true,
+      
     }
   },
   methods:{
     
   }
+  
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" >
-$primary    : #e471ff;
-$secondary  : #4AE4FF;
-$ground : #c9ff4c;
-
+@import '../assets/main.scss';
 
 .navbar{
   z-index: 99999;
   width: 100%;
   height: 100vh;
-  background-color: black;
+  background-color: white !important;
   margin-bottom: 3rem !important;
   position: fixed;
   top:0%;
+  overflow-y: hidden;
 
   right: -100%;
 
@@ -91,6 +93,15 @@ $ground : #c9ff4c;
     transform: rotateZ(405deg) translate(-5px, -6px);
   }
 /* nav */
+  .logo{
+    
+    img{
+    object-fit: contain;
+    width: 50% !important;
+    }
+    
+  }
+
   .nav-list{
     text-align: center;
     width: 100%;
@@ -107,18 +118,18 @@ $ground : #c9ff4c;
   .nav-link{
     text-decoration: none;
     width: 100%;
-    font-size: 1.75rem;
+    font-size: 14px;
     text-transform: uppercase;
-    color: white;
+    color: $secondary !important;
     font-weight: 300;
     position: relative;
-    padding: 3px 0;
+    padding: 10px 0;
   }
   .nav-link::before, .nav-link::after {
     content: "";
     width: 100%;
     height: 2px;
-    background-color: white;
+    background-color: $primary !important;
     position: absolute;
     left:0;
     transform: scaleX(0) ;
@@ -140,9 +151,8 @@ $ground : #c9ff4c;
     transform: scaleX(1) ;
   }
   .active>a{
-    background: white;
-    color: $primary;
-    
+    //background: red;
+    color: $primary !important;
     max-width: 100%;
   }
    @media screen and (min-width: 768px) {
@@ -160,17 +170,17 @@ $ground : #c9ff4c;
   align-items: center;
   border-radius: 0 0 0 0;
   transition: right .8s cubic-bezier(1,0,0,1);
-  box-shadow: 3px 5px 20px 2px rgba(0, 0, 0, 0.5);
 }
   .logo{
     position: absolute;
     top: .3rem;
     left: 3rem;
-   
+    text-align: start;
     height: 100%;
-    width: 100px;
+    
     img{
     object-fit: contain;
+    width: 33% !important;
     }
     
   }
@@ -180,18 +190,19 @@ $ground : #c9ff4c;
   .nav-list{
     display: flex;
     justify-content: flex-end;
+    height: 100%;
 
     align-items: center;
-    padding-right: 15rem;
+    padding-right: 10rem;
     
    
   }
   .nav-item{
-    width: 10%;
+    
     
     list-style: none;
-    margin: 1rem ;
-    min-width: 7.5rem;
+    margin: 0 1rem;
+    min-width: 3rem;
     
     
   }
@@ -200,12 +211,12 @@ $ground : #c9ff4c;
     justify-content: center;
     text-decoration: none;
     width: 100%;
-    font-size: 1.2rem;
+    font-size: .8rem;
     text-transform: uppercase;
     color: white;
     font-weight: 300;
     position: relative;
-    padding: 3px 0;
+    padding: 10px;
   }
   .nav-link::before, .nav-link::after {
     content: "";

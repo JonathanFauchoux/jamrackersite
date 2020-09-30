@@ -22,32 +22,33 @@ export default {
 </script>
 
 <style lang="scss">
+$primary    : #159EDE;
+$secondary  : #606060;
 
-$primary    : #e471ff;
-$secondary  : #4AE4FF;
-$ground : #c9ff4c;
   .footer{
-     position: fixed;
-    bottom:-1px;
-    left: 0; 
-    z-index: 99999;;
+     position: relative;
+    // bottom:-1px;
+    // left: 0; 
+    // z-index: 99999;
     width: 100%;
-
+    margin-top: 3rem;
     .color{
       z-index: 99999;;
-      background-color: black;
+      background-color: white;
       height: 3.5rem;
       width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       .social-link{
         @media screen and (max-width: 767px){
               display: flex;
-              width: 50%;
+              width: 80%;
           justify-content: space-between;
           }
         @media screen and (max-width: 1023px) and (min-width: 767px){
           display: flex;
           justify-content: center;
-
           left: 0%;
           width: 100%;
 
@@ -57,29 +58,29 @@ $ground : #c9ff4c;
         }
         display: flex;
         align-items: center;
-        position: absolute;
-        right: 10rem;
-        bottom: 0rem;
+        justify-content: center;
+        
         p{
           @media screen and (max-width: 767px){
-            display: none;
+            font-size: .9rem;
+            
           }
           padding-top: .5rem;
-          color :rgba(white,0.7);
-          font-size: 1.4rem;
+          color :$secondary;
+          font-size: 1rem;
         }
         a{
            @media screen and (max-width: 767px){
-            margin: 0;
+            margin: .5rem;
             
           }
          //
-          color: white;
-          font-size: 2rem;
+          color: $secondary;
+          font-size: 1.5rem;
           margin-left: 2rem;
           transition: all .3s;
           &:hover{
-            color: $ground;
+            color: $primary;
           }
         }
       }
