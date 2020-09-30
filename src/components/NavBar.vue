@@ -58,9 +58,7 @@ $ground : #c9ff4c;
   transition: right .8s cubic-bezier(1,0,0,1);
   
 }
-.logo>img{
-  
-  }
+
 /* Burgerrr */
   .burger-menu{
     display: flex;
