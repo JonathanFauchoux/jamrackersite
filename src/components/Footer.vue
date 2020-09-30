@@ -2,9 +2,12 @@
   <footer class="footer">
     <div class="color">
       <div class="social-link">
-        <p>© copyright 2020 JamRacker</p>
+        <p>JamRacker © copyright 2020</p>
+        <div>
         <a href="https://github.com/JonathanFauchoux" target="_blank"><i class="fab fa-github-square"></i></a>
         <a href="mailto:jonathan.fauchoux@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+
+        </div>
       </div>
     </div>
   </footer>
@@ -41,14 +44,15 @@ $secondary  : #606060;
       align-items: center;
       .social-link{
         @media screen and (max-width: 767px){
-              display: flex;
-              width: 80%;
-          justify-content: space-between;
+            align-items: center;
+            justify-content: space-around;
+              width: 100%;
           }
         @media screen and (max-width: 1023px) and (min-width: 767px){
           display: flex;
           justify-content: center;
-          left: 0%;
+          
+       
           width: 100%;
 
           a:nth-child(1){
@@ -56,7 +60,7 @@ $secondary  : #606060;
           }
         }
         display: flex;
-        align-items: center;
+       
         justify-content: center;
         
         p{
@@ -70,7 +74,7 @@ $secondary  : #606060;
         }
         a{
            @media screen and (max-width: 767px){
-            margin: .5rem;
+            margin: 0 .5rem;
             
           }
          //

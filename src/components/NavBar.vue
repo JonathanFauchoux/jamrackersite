@@ -110,7 +110,7 @@ export default {
   .nav-item{
     display: flex;
     list-style: none;
-    margin: 1rem 0;
+    margin: 1.7rem 0;
     min-width: 100%;
     
     
@@ -127,11 +127,11 @@ export default {
   }
   .nav-link::before, .nav-link::after {
     content: "";
-    width: 100%;
+    width: 50%;
     height: 2px;
     background-color: $primary !important;
     position: absolute;
-    left:0;
+    left:25%;
     transform: scaleX(0) ;
     transition: all 0.5s;
   }
@@ -169,7 +169,7 @@ export default {
   justify-content: flex-start;
   align-items: center;
   border-radius: 0 0 0 0;
-  transition: right .8s cubic-bezier(1,0,0,1);
+  transition: all .5s;
 }
   .logo{
     position: absolute;
