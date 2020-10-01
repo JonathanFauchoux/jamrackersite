@@ -2,15 +2,20 @@
   <div class="about" >
     
    
-      <div class="about_contain paragraph " data-aos="fade-up" data-aos-delay="0" v-for="teamMate in teamMates" :key="teamMate.name">
+      <div class="about_contain paragraph " 
+      data-aos="fade-right" 
+      data-aos-delay="0" 
+      
+      v-for="teamMate in teamMates" 
+      :key="teamMate.name">
         <div class="about_contain__logo">
           <img :src="teamMate.img" alt="logo" />
         </div>
-        <div class="about_contain__text" >
+        <div class="about_contain__text" data-aos="fade-left" data-aos-delay="400" >
           <div class="title-line"></div>
           <h2>{{teamMate.name}}</h2>
           <p>{{teamMate.text}}</p>
-          <div class="social-item">
+          <div class="social-item" data-aos="flip-down" data-aos-delay="600" >
             <a class="social-item" :href="teamMate.git" target="_blank"><i class="fab fa-github-square"></i></a>
             <a class="social-item" :href="teamMate.linkedin" target="_blank"><i class="fab fa-linkedin"></i></a>
           </div>
@@ -36,11 +41,11 @@ export default {
           linkedin:"https://www.linkedin.com/in/jonathan-fauchoux-62b069163/"
         },
         {
-          img:"https://sunnilandcorp.com/wp-content/uploads/2016/05/no-avatar-female.jpg",
-          name: "Maud ",
+          img:"https://media-exp1.licdn.com/dms/image/C5603AQFMZpUqeS0VVQ/profile-displayphoto-shrink_200_200/0?e=1606953600&v=beta&t=nB-DpWDkDN7B9kRyDLh0IpRMjGXy62s5QKaf3wCTJIM",
+          name: "Maud Gennart",
           text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam quod ad, esse aliquid debitis quia vel rem eos ea et enim? Minus cumque non asperiores est blanditiis.",
-          git:"https://github.com/Othior",
-          linkedin:"https://www.linkedin.com/in/marvyn-splingaire-675849191/"
+          git:"https://github.com/maud08",
+          linkedin:"https://www.linkedin.com/in/maud-gennart-02028a54/"
         },
         {
           img:"https://media-exp1.licdn.com/dms/image/C4E03AQHNH9NBPBMcvw/profile-displayphoto-shrink_800_800/0?e=1606953600&v=beta&t=qTMjVMHibFskiMbmNFH9TGs0ftnd-zvtje-X2O5sIxo",
