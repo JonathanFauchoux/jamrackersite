@@ -90,8 +90,11 @@ export default {
   position: relative;
   /* padding: 10rem; */
   padding-top: 7rem;
+  padding: 0 10%;
   background-color: White;
-  width: calc(100% + 40rem);
+  // width: calc(100% + 40rem);
+  overflow: hidden;
+  // padding-left: 10%;
 
   height: calc(100% + 20rem);
  &__background{
@@ -129,6 +132,7 @@ export default {
     position: relative;
     padding-bottom: 10rem;
     z-index: 0;
+    width: 100%;
     
 
   }
@@ -158,7 +162,7 @@ export default {
         //margin-right: 5rem !important;
         width: 45%;
       }
-      width: 40%;
+      width: 100%;
       //padding: 0 3rem;
       //padding-left: 10rem;
       
