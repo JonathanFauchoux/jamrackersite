@@ -52,6 +52,9 @@ export default {
   margin: 0;
   padding: 0;
   font-family: Helvetica, sans-serif;
+
+}
+html{
   overflow-x: hidden;
 }
 /////Scroll Bar ////
@@ -94,7 +97,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
- 
+  
 
   width: 100% !important;
   height: 100%;
@@ -102,9 +105,13 @@ body{
 }
 
 main{
+  @media screen and (max-width: 767px){
+    width: 90vw;
+  }
   width: 70vw;
   margin-inline-start: auto;
   margin-inline-end: auto;
+    
 }
 
 

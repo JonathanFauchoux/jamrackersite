@@ -11,8 +11,8 @@
         <div class="logo">
           <img src="../assets/jamrackerLogo.jpg" alt="logo">
         </div>
-        <router-link to="/" tag="li"  active-class="active" exact class="nav-item"><a class="nav-link">Home</a></router-link>
-        <router-link to="/About" tag="li"  active-class="active" exact class="nav-item"><a class="nav-link">About</a></router-link>
+        <router-link to="/" tag="li"  active-class="active" exact class="nav-item"><a class="nav-link">JamRacker</a></router-link>
+        <router-link to="/About" tag="li"  active-class="active" exact class="nav-item"><a class="nav-link">Our Team</a></router-link>
         <router-link to="/Contact" tag="li" active-class="active" class="nav-item"><a class="nav-link">Contact</a></router-link>
       </ul>
     </nav>
@@ -49,7 +49,7 @@ export default {
   margin-bottom: 3rem !important;
   position: fixed;
   top:0%;
-  overflow-y: hidden;
+  overflow: hidden;
 
   right: -100%;
 
