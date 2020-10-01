@@ -95,8 +95,8 @@ export default {
       align-items: flex-start;
       justify-content: flex-start;
       left:0%;
-      padding: 0;
-      padding-bottom: 2rem;
+      //padding: 0;
+      padding-bottom: 20rem;
       
     }
     @media screen and (max-width: 1023px) and (min-width: 767px) {
@@ -106,6 +106,7 @@ export default {
       justify-content: flex-start;
       left:0%;
       padding: 0;
+      height: 100%;
     }
     position: relative;
     left:-30%;
@@ -118,17 +119,26 @@ export default {
     padding: 5rem 0 5rem 0;
     &_image{
       @media screen and (max-width: 767px){
-      width: 100%;
-      height: 300px;
+      width: 300px !important;
+      min-height: 300px !important;
       background-position: center;
-      background-size: contain; 
-      margin-bottom: 6rem;
+      background-size: 100%; 
+      margin-top: -5rem;
+      position: relative;
+      top: -10%;
+      left: 0%;
+      
+      //z-index: 999;
+     
     }
       @media screen and (max-width: 1023px) and (min-width: 767px) {
       width: 100%;
       height: 300px;
       background-position: center;
       background-size: contain; 
+      position: relative;
+      left: 10%;
+      top: -10%;
     }
       height: auto;
       width: 1300px;
@@ -157,7 +167,7 @@ export default {
       h1{
         @media screen and (max-width: 767px){
         right: 0;
-          margin-top: -25%;
+          margin-top: 0%;
           font-size: 3.7rem;
         }
         @media screen and (max-width: 1023px) and (min-width: 767px) {
