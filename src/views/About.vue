@@ -110,12 +110,12 @@ export default {
     position: relative;
     left:-30%;
     width: 150%;
-    height: 90vh;
+    height: 60vh;
     //border: 2px solid red;
     display: flex;
     justify-content: center;
     z-index: 0;
-    padding: 5rem 0 10rem 0;
+    padding: 5rem 0 5rem 0;
     &_image{
       @media screen and (max-width: 767px){
       width: 100%;
@@ -133,9 +133,10 @@ export default {
       height: auto;
       width: 1300px;
       background: url('https://www.kikk.be/2017/files/library/Sponsors/02_Founding-partners/04_Media-partners/03_Partners/05_Friends/03_Partners/Cepegra-%28square%29_logo.jpg') left center no-repeat;
-      background-position: left; /* Center the image */
+      background-position: center; /* Center the image */
       background-repeat: no-repeat; /* Do not repeat the image */
-      background-size: cover; 
+      background-size: 80%; 
+      
     }
     .text{
       @media screen and (max-width: 767px){
@@ -147,7 +148,7 @@ export default {
       }
       height: 500px;
       position: relative;
-      //right: -50%;
+      right: 6rem;
       z-index: 1;
       width: 100%;
       display: flex;
@@ -156,12 +157,12 @@ export default {
       h1{
         @media screen and (max-width: 767px){
         right: 0;
-          margin-top: -20%;
+          margin-top: -25%;
           font-size: 3.7rem;
         }
         @media screen and (max-width: 1023px) and (min-width: 767px) {
           right: 0;
-          margin-top: -20%;
+          margin-top: -30%;
         }
         color: white;
         position: relative;
@@ -203,11 +204,10 @@ export default {
       }
       .title-line {
         @media screen and (max-width: 1023px) and (min-width: 767px) {
-      display: none;
+          display: none;
         }
         @media screen and (max-width: 767px) {
-          top: -1.5rem;
-          left: 0rem;
+           display: none;
         }
         height: 2rem;
         width: 65%;
