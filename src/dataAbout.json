@@ -1,0 +1,54 @@
+[
+  {
+    "img": "https://media-exp1.licdn.com/dms/image/C5603AQGADOu0AJNNGg/profile-displayphoto-shrink_200_200/0?e=1606953600&v=beta&t=efZl7epWM3hHjkLXgpCL3EQxGcSAK3_ljcwZmzM6pn0",
+    "name": "Jonathan Fauchoux",
+    "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam quod ad, esse aliquid debitis quia vel rem eos ea et enim? Minus sequi inventore accusamus cumque non asperiores est blanditiis.",
+    "git": "https://github.com/JonathanFauchoux",
+    "linkedin": "https://www.linkedin.com/in/jonathan-fauchoux-62b069163/",
+    "mail": "mailto:jonathan.fauchoux@gmail.com"
+  },
+  {
+    "img":"https://media-exp1.licdn.com/dms/image/C5603AQFMZpUqeS0VVQ/profile-displayphoto-shrink_200_200/0?e=1606953600&v=beta&t=nB-DpWDkDN7B9kRyDLh0IpRMjGXy62s5QKaf3wCTJIM",
+    "name": "Maud Gennart",
+    "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam quod ad, esse aliquid debitis quia vel rem eos ea et enim? Minus cumque non asperiores est blanditiis.",
+    "git": "https://github.com/maud08",
+    "linkedin": "https://www.linkedin.com/in/maud-gennart-02028a54/",
+    "mail": "mailto:maudgennart@gmail.com"
+  },
+  {
+    "img":"https://media-exp1.licdn.com/dms/image/C4E03AQHNH9NBPBMcvw/profile-displayphoto-shrink_800_800/0?e=1606953600&v=beta&t=qTMjVMHibFskiMbmNFH9TGs0ftnd-zvtje-X2O5sIxo",
+    "name": "Quentin Vandevorst",
+    "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam quod ad, esse aliquid debitis quia vel rem eos ea et enim? Minus cumque non asperiores est blanditiis.",
+    "git": "https://github.com/Survive95",
+    "linkedin": "https://www.linkedin.com/in/quentinvandevorst/",
+    "mail": "info@quentinv-cv.site",
+    "web": "mailto:https://www.quentinv-cv.site/"
+  },
+  {
+    "img": "https://media-exp1.licdn.com/dms/image/C4D03AQE52BHZYTuVWA/profile-displayphoto-shrink_200_200/0?e=1606953600&v=beta&t=b-6b5dyFifVuKOoBOcfAgX-dYkut_PpJScc-msSTsHg",
+    "name": "Joseph Prygiel",
+    "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam quod ad, esse aliquid debitis quia vel rem eos ea et enim? Minus cumque non asperiores est blanditiis.",
+    "git": "https://github.com/Procaillass",
+    "linkedin": "https://www.linkedin.com/in/joseph-prygiel-7401b1171/",
+    "mail": "mailto:Prygieljoseph@gmail.com",
+    "web": "https://winterinkcoming.wordpress.com/"
+    
+  },
+  {
+    "img": "https://media-exp1.licdn.com/dms/image/C4D03AQEgo-yDbhYyXA/profile-displayphoto-shrink_200_200/0?e=1606953600&v=beta&t=uZLG1Bpwi_g4ENAFQbOWlQNQYBsMS37szuhLa-Wawn8",
+    "name": "Mathieu Slaedts",
+    "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam quod ad, esse aliquid debitis quia vel rem eos ea et enim? Minus cumque non asperiores est blanditiis.",
+    "git": "https://github.com/MathieuSlaedts",
+    "linkedin": "https://www.linkedin.com/in/mathieuslaedts/",
+    "web": "https://mathieu-slaedts.be", 
+    "mail": "mailto:mathieu.slaedts@gmail.com"
+  },
+  {
+    "img": "https://media-exp1.licdn.com/dms/image/C5603AQFZTrtb8CcKAg/profile-displayphoto-shrink_200_200/0?e=1606953600&v=beta&t=kS91cwmMK8LYtojDDZPPjpcjdAUupOexrjTbdi6szG4",
+    "name": "Marvyn Splingaire ",
+    "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam quod ad, esse aliquid debitis quia vel rem eos ea et enim? Minus cumque non asperiores est blanditiis.",
+    "git": "https://github.com/Othior",
+    "linkedin": "https://www.linkedin.com/in/marvyn-splingaire-675849191/",
+    "mail": "mailto:splingaire.marvyn@gmail.com"
+  }
+]

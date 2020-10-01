@@ -46,10 +46,10 @@
           <a data-aos="fade-up" data-aos-delay="1000" class="social-item" :href="teamMate.linkedin" target="_blank"
             ><i class="fab fa-linkedin"></i
           ></a>
-          <a data-aos="fade-up" data-aos-delay="1200" class="social-item" :href="teamMate.linkedin" target="_blank"
+          <a v-if="teamMate.web" data-aos="fade-up" data-aos-delay="1200" class="social-item" :href="teamMate.web" target="_blank"
             ><i class="fas fa-at"></i
           ></a>
-          <a data-aos="fade-up" data-aos-delay="1400" class="social-item" :href="teamMate.linkedin" target="_blank"
+          <a v-if="teamMate.mail" data-aos="fade-up" data-aos-delay="1400" class="social-item" :href="teamMate.mail" target="_blank"
             ><i class="fas fa-paper-plane"></i></a>
         </div>
       </div>
@@ -58,66 +58,13 @@
 </template>
 
 <script>
+import dataAbout from "../dataAbout.json";
+
 export default {
   name: "about",
   data() {
     return {
-      teamMates: [
-        {
-          img:
-            "https://media-exp1.licdn.com/dms/image/C5603AQGADOu0AJNNGg/profile-displayphoto-shrink_200_200/0?e=1606953600&v=beta&t=efZl7epWM3hHjkLXgpCL3EQxGcSAK3_ljcwZmzM6pn0",
-          name: "Jonathan Fauchoux",
-          text:
-            "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam quod ad, esse aliquid debitis quia vel rem eos ea et enim? Minus sequi inventore accusamus cumque non asperiores est blanditiis.",
-          git: "https://github.com/JonathanFauchoux",
-          linkedin: "https://www.linkedin.com/in/jonathan-fauchoux-62b069163/",
-        },
-        {
-          img:
-            "https://media-exp1.licdn.com/dms/image/C5603AQFMZpUqeS0VVQ/profile-displayphoto-shrink_200_200/0?e=1606953600&v=beta&t=nB-DpWDkDN7B9kRyDLh0IpRMjGXy62s5QKaf3wCTJIM",
-          name: "Maud Gennart",
-          text:
-            "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam quod ad, esse aliquid debitis quia vel rem eos ea et enim? Minus cumque non asperiores est blanditiis.",
-          git: "https://github.com/maud08",
-          linkedin: "https://www.linkedin.com/in/maud-gennart-02028a54/",
-        },
-        {
-          img:
-            "https://media-exp1.licdn.com/dms/image/C4E03AQHNH9NBPBMcvw/profile-displayphoto-shrink_800_800/0?e=1606953600&v=beta&t=qTMjVMHibFskiMbmNFH9TGs0ftnd-zvtje-X2O5sIxo",
-          name: "Quentin Vandevorst",
-          text:
-            "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam quod ad, esse aliquid debitis quia vel rem eos ea et enim? Minus cumque non asperiores est blanditiis.",
-          git: "https://github.com/Survive95",
-          linkedin: "https://www.linkedin.com/in/quentinvandevorst/",
-        },
-        {
-          img:
-            "https://media-exp1.licdn.com/dms/image/C4D03AQE52BHZYTuVWA/profile-displayphoto-shrink_200_200/0?e=1606953600&v=beta&t=b-6b5dyFifVuKOoBOcfAgX-dYkut_PpJScc-msSTsHg",
-          name: "Joseph Prygiel",
-          text:
-            "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam quod ad, esse aliquid debitis quia vel rem eos ea et enim? Minus cumque non asperiores est blanditiis.",
-          git: "https://github.com/Procaillass",
-          linkedin: "https://www.linkedin.com/in/joseph-prygiel-7401b1171/",
-        },
-        {
-          img:
-            "https://media-exp1.licdn.com/dms/image/C4D03AQEgo-yDbhYyXA/profile-displayphoto-shrink_200_200/0?e=1606953600&v=beta&t=uZLG1Bpwi_g4ENAFQbOWlQNQYBsMS37szuhLa-Wawn8",
-          name: "Mathieu Slaedts",
-          text:
-            "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam quod ad, esse aliquid debitis quia vel rem eos ea et enim? Minus cumque non asperiores est blanditiis.",
-          git: "https://github.com/MathieuSlaedts",
-          linkedin: "https://www.linkedin.com/in/mathieuslaedts/",
-        },
-        {
-          img:
-            "https://media-exp1.licdn.com/dms/image/C5603AQFZTrtb8CcKAg/profile-displayphoto-shrink_200_200/0?e=1606953600&v=beta&t=kS91cwmMK8LYtojDDZPPjpcjdAUupOexrjTbdi6szG4",
-          name: "Marvyn Splingaire ",
-          text:
-            "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam quod ad, esse aliquid debitis quia vel rem eos ea et enim? Minus cumque non asperiores est blanditiis.",
-          git: "https://github.com/Othior",
-          linkedin: "https://www.linkedin.com/in/marvyn-splingaire-675849191/",
-        },
-      ],
+      teamMates: dataAbout
     };
   },
 };
@@ -137,33 +84,68 @@ export default {
   padding-top: 7rem;
   padding: 0 20%;
   background-color: White;
-  
+  overflow: hidden;
   height: calc(100% + 20rem);
   
 
   &_header{
-    
+    @media screen and (max-width: 767px){
+      display: flex;
+      flex-direction: column !important;
+      align-items: flex-start;
+      justify-content: flex-start;
+      left:0%;
+      padding: 0;
+      padding-bottom: 2rem;
+      
+    }
+    @media screen and (max-width: 1023px) and (min-width: 767px) {
+      display: flex;
+      flex-direction: column !important;
+      align-items: flex-start;
+      justify-content: flex-start;
+      left:0%;
+      padding: 0;
+    }
     position: relative;
     left:-30%;
     width: 150%;
+    height: 90vh;
     //border: 2px solid red;
     display: flex;
     justify-content: center;
     z-index: 0;
     padding: 5rem 0 10rem 0;
     &_image{
+      @media screen and (max-width: 767px){
+      width: 100%;
+      height: 300px;
+      background-position: center;
+      background-size: contain; 
+      margin-bottom: 6rem;
+    }
+      @media screen and (max-width: 1023px) and (min-width: 767px) {
+      width: 100%;
+      height: 300px;
+      background-position: center;
+      background-size: contain; 
+    }
       height: auto;
-      width: 1000px;
+      width: 1300px;
       background: url('https://www.kikk.be/2017/files/library/Sponsors/02_Founding-partners/04_Media-partners/03_Partners/05_Friends/03_Partners/Cepegra-%28square%29_logo.jpg') left center no-repeat;
-    
-   
-    background-position: left; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover; 
+      background-position: left; /* Center the image */
+      background-repeat: no-repeat; /* Do not repeat the image */
+      background-size: cover; 
     }
     .text{
+      @media screen and (max-width: 767px){
+        left:0%;
+      }
+      @media screen and (max-width: 1023px) and (min-width: 767px) {
+      
+      left:0%;
+      }
       height: 500px;
-      width: 50%;
       position: relative;
       //right: -50%;
       z-index: 1;
@@ -172,6 +154,15 @@ export default {
       flex-direction: column;
       justify-content: center;
       h1{
+        @media screen and (max-width: 767px){
+        right: 0;
+          margin-top: -20%;
+          font-size: 3.7rem;
+        }
+        @media screen and (max-width: 1023px) and (min-width: 767px) {
+          right: 0;
+          margin-top: -20%;
+        }
         color: white;
         position: relative;
         right: 23%;
@@ -183,6 +174,13 @@ export default {
         }
       }
       h4{
+        @media screen and (max-width: 767px){
+          right: 0;
+          
+        }
+        @media screen and (max-width: 1023px) and (min-width: 767px) {
+          right: 0;
+        }
         position: relative;
         right: 10%;
         color: $primary;
@@ -190,6 +188,12 @@ export default {
         padding-bottom: 2rem;
       }
       p{
+        @media screen and (max-width: 767px){
+          width: 60%;
+        }
+        @media screen and (max-width: 1023px) and (min-width: 767px) {
+          width: 60%;
+      }
         width: 100%;
         padding-bottom: 1rem;
         font-size: 1.1rem;
@@ -198,8 +202,12 @@ export default {
         
       }
       .title-line {
+        @media screen and (max-width: 1023px) and (min-width: 767px) {
+      display: none;
+        }
         @media screen and (max-width: 767px) {
-          top: 2.8rem;
+          top: -1.5rem;
+          left: 0rem;
         }
         height: 2rem;
         width: 65%;
@@ -223,7 +231,7 @@ export default {
       flex-direction: column;
       align-items: flex-start;
       justify-content: flex-start;
-      //padding: 3rem;
+      padding-bottom: 6rem;
     }
     display: flex;
     align-items: center;
