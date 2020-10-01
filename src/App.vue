@@ -1,58 +1,52 @@
 <template>
   <div id="app">
     <NavBar />
-      <main class="main" >
-
-        <transition name="slide" mode="out-in">
-          <router-view></router-view>
-        </transition>
-
-      </main>
-      <Footer />
+    <main class="main">
+      <transition name="slide" mode="out-in">
+        <router-view></router-view>
+      </transition>
+    </main>
+    <Footer />
   </div>
 </template>
 <script>
-import NavBar from './components/NavBar.vue'
-import Footer from './components/Footer.vue'
-
-
+import NavBar from "./components/NavBar.vue";
+import Footer from "./components/Footer.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     NavBar,
     Footer,
   },
-  data () {
+  data() {
     return {
-      transitionName: ''
-    }
+      transitionName: "",
+    };
   },
-  mounted(){
-    window.addEventListener('scroll', () => {
-      if(window.scrollY > 0){
-        document.querySelector('.navbar').style.boxShadow = "0 0 10px 0 grey"
+  mounted() {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 0) {
+        document.querySelector(".navbar").style.boxShadow = "0 0 10px 0 grey";
+      } else {
+        document.querySelector(".navbar").style.boxShadow = "none";
       }
-      else{
-        document.querySelector('.navbar').style.boxShadow = "none"
-      }
-    })
+    });
   },
   watch: {
-    $route (to, from) {
-      this.transitionName = to.meta.page > from.meta.page ? 'next' : 'prev'
-    }
-  }
-}
+    $route(to, from) {
+      this.transitionName = to.meta.page > from.meta.page ? "next" : "prev";
+    },
+  },
+};
 </script>
 <style lang="scss">
-@import './assets/main.scss';
+@import "./assets/main.scss";
 
-*{
+* {
   margin: 0;
   padding: 0;
   font-family: Helvetica, sans-serif;
-  overflow-x: hidden;
 }
 /////Scroll Bar ////
 /* width */
@@ -75,11 +69,12 @@ export default {
   background: #1184b9;
 }
 
+body {
+  background: white;
+}
 
-body{
-   background:white;
-  
- 
+html{
+  overflow-x: hidden;
 }
 #app {
   //position: absolute;
@@ -89,58 +84,52 @@ body{
   height: 100%;
   background-color: white;
   // overflow: hidden;
-  .container{
-  margin: 4rem 0 0rem 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
- 
+  .container {
+    margin: 4rem 0 0rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-  width: 100% !important;
-  height: 100%;
+    width: 100% !important;
+    height: 100%;
   }
 }
 
-main{
-  width: 70vw;
+main {
+  // width: 70vw;
   margin-inline-start: auto;
   margin-inline-end: auto;
 }
 
-
-
 /* Transition */
-  .slide-leave-active{
-    transition: opacity .5s ease;
-    opacity: 0;
-    animation: slide-out .5s ease-out forwards;
+.slide-leave-active {
+  transition: opacity 0.5s ease;
+  opacity: 0;
+  animation: slide-out 0.5s ease-out forwards;
+}
+.slide-leave {
+  opacity: 1;
+  transform: translateX(0);
+}
+.slide-enter-active {
+  animation: slide-in 0.5s ease forwards;
+}
+@keyframes slide-out {
+  0% {
+    transform: translateY(0);
   }
-  .slide-leave{
-    opacity: 1;
-    transform: translateX(0);
+  100% {
+    transform: translateY(-30px);
   }
-  .slide-enter-active{
-    animation: slide-in .5s ease forwards;
-    
+}
+@keyframes slide-in {
+  0% {
+    transform: translateY(-30px);
   }
-  @keyframes slide-out {
-    0% {
-      transform: translateY(0);
-    }
-    100%{
-      transform: translateY(-30px);
-    }
+  100% {
+    transform: translateY(0);
   }
-  @keyframes slide-in {
-    0% {
-      transform: translateY(-30px);
-    }
-    100%{
-      transform: translateY(0);
-    }
-  }
-
-
+}
 </style>
 
 

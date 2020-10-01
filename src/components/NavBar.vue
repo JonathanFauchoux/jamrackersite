@@ -50,6 +50,7 @@ export default {
   position: fixed;
   top:0%;
   overflow-y: hidden;
+  overflow-x: hidden;
 
   right: -100%;
 

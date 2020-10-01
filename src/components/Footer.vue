@@ -32,6 +32,7 @@ $secondary  : #606060;
     // bottom:-1px;
     // left: 0; 
     // z-index: 99999;
+    
     width: 100%;
     margin-top: 3rem;
     .color{

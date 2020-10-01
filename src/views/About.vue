@@ -90,7 +90,7 @@ export default {
   position: relative;
   /* padding: 10rem; */
   padding-top: 7rem;
-  padding: 0 10%;
+  padding: 0 20%;
   background-color: White;
   // width: calc(100% + 40rem);
   overflow: hidden;

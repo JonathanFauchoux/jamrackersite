@@ -252,7 +252,7 @@ export default {
     setTimeout(() => {
         if(window.scrollY === 0){
             window.scrollTo({
-                top: 800,
+                top: 1000,
                 left: 0,
                 behavior:'smooth' 
             })
