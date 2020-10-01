@@ -35,6 +35,7 @@ $secondary  : #606060;
     
     width: 100%;
     margin-top: 3rem;
+    overflow-x: hidden;
     .color{
       z-index: 99999;;
       background-color: white;

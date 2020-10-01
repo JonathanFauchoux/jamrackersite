@@ -47,6 +47,10 @@ export default {
   margin: 0;
   padding: 0;
   font-family: Helvetica, sans-serif;
+
+}
+html{
+  overflow-x: hidden;
 }
 /////Scroll Bar ////
 /* width */
@@ -84,21 +88,26 @@ html{
   height: 100%;
   background-color: white;
   // overflow: hidden;
-  .container {
-    margin: 4rem 0 0rem 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .container{
+  margin: 4rem 0 0rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 
-    width: 100% !important;
-    height: 100%;
+  width: 100% !important;
+  height: 100%;
   }
 }
 
-main {
-  // width: 70vw;
+main{
+  @media screen and (max-width: 767px){
+    width: 90vw;
+  }
+  width: 70vw;
   margin-inline-start: auto;
   margin-inline-end: auto;
+    
 }
 
 /* Transition */
