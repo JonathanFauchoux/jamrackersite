@@ -5,6 +5,8 @@
         <div  class="about_header_image" data-aos="fade-right"
         data-aos-delay="0"></div>
         <div class="text">
+          <div class="title-line" data-aos="fade-left"
+        data-aos-delay="2000" data-aos-duration="1000"></div>
           <h1  data-aos="fade-down" data-aos-delay="1200" >THE <span>TEAM</span></h1>
           <h4 data-aos="fade-left"
         data-aos-delay="100">ingrwf-08</h4>
@@ -17,9 +19,6 @@
         </div>
        
     </div>
-
-
-
 
     <div
       class="about_contain paragraph"
@@ -35,17 +34,23 @@
         class="about_contain__text"
         data-aos="fade-left"
         data-aos-delay="400"
+        data-aos-duration="1500"
       >
         <div class="title-line"></div>
         <h2>{{ teamMate.name }}</h2>
         <p>{{ teamMate.text }}</p>
-        <div class="social-item" data-aos="flip-down" data-aos-delay="600">
-          <a class="social-item" :href="teamMate.git" target="_blank"
+        <div class="social-item" >
+          <a data-aos="fade-up" data-aos-delay="800" class="social-item" :href="teamMate.git" target="_blank"
             ><i class="fab fa-github-square"></i
           ></a>
-          <a class="social-item" :href="teamMate.linkedin" target="_blank"
+          <a data-aos="fade-up" data-aos-delay="1000" class="social-item" :href="teamMate.linkedin" target="_blank"
             ><i class="fab fa-linkedin"></i
           ></a>
+          <a data-aos="fade-up" data-aos-delay="1200" class="social-item" :href="teamMate.linkedin" target="_blank"
+            ><i class="fas fa-at"></i
+          ></a>
+          <a data-aos="fade-up" data-aos-delay="1400" class="social-item" :href="teamMate.linkedin" target="_blank"
+            ><i class="fas fa-paper-plane"></i></a>
         </div>
       </div>
     </div>
@@ -167,12 +172,14 @@ export default {
       flex-direction: column;
       justify-content: center;
       h1{
-        color: $primary;
+        color: white;
         position: relative;
         right: 23%;
-        font-size: 4rem;
+        font-size: 5rem;
+        text-shadow: 1px 5px 2px $secondary, 0 0 1em $primary, 0 0 0.2em $primary;
         span{
-          color: $secondary;
+          text-shadow: 5px 5px $secondary;
+          text-shadow: 1px 5px 2px $primary, 0 0 1em $secondary, 0 0 0.2em $secondary;
         }
       }
       h4{
@@ -188,6 +195,18 @@ export default {
         font-size: 1.1rem;
         font-weight: 300;
         color: $secondary;
+        
+      }
+      .title-line {
+        @media screen and (max-width: 767px) {
+          top: 2.8rem;
+        }
+        height: 2rem;
+        width: 65%;
+        border-bottom: 2px solid $primary;
+        position: relative;
+        top: 3rem;
+        left: 15rem;
       }
     }
   }
