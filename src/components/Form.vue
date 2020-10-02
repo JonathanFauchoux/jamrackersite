@@ -1,0 +1,285 @@
+<template>
+<div>
+  <form  class="vue-form">
+            <div>
+                <div >
+                  <label for="name">Name</label>
+                    <input type="text" class="form-control" placeholder="Name" name="name" v-model="name"/>
+                </div>
+                <div >
+                <label for="email">Email</label>
+                    <input type="email" class="form-control" placeholder="Email" name="email" v-model="email"/>
+                </div>
+                <div class="col-8 form-group pt-2 mx-auto">
+                <label for="subject">Subject</label>
+                    <input type="text" class="form-control" placeholder="Subject" name="subject" v-model="subject"/>
+                </div>
+                <div class="">
+                <label for="message">Message</label>
+                    <textarea class="form-control" id="" cols="30" rows="8" placeholder="Dear Joe, ..." name="message" v-model="message"></textarea>
+                </div>
+                 
+                <div class="">
+                    <button  class="btn btn-info sendBtn" @click.prevent="retoggle">ENVOYER</button>
+                </div> 
+            </div>
+        </form> 
+        
+
+</div>
+  
+</template>
+
+<script>
+
+export default {
+  name: 'Form',
+  components: {
+
+  },
+  data() {
+    return {
+      Form: {},
+      name: null,
+      email: null,
+      subject:null,
+      message: null,
+   
+    }
+  },
+  methods:{
+    retoggle(){
+      let card = document.querySelector('.card') 
+      card.classList.remove('flipped')
+      this.Form = {
+        name: this.name,
+        email: this.email,
+        subject:this.subject,
+        message: this.message,
+      }
+      this.$emit('updateDataForm',this.Form)
+
+      console.log('Form', this.dataForm)
+    }
+  }
+}
+</script>
+
+<style lang="scss" >
+@import "../assets/main.scss";
+
+.sendBtn{
+  background-color: rgba($primary, 0.7) !important;
+}
+
+.error-div{
+  display: flex;
+  justify-content: center;
+}
+.error-div img{
+  position: relative;
+  top: -7rem;
+}
+.vue-form {
+  
+  font-size: 16px;
+  width:80% ;
+  padding: 0 3rem;
+  margin: 0 auto 4rem auto;
+}
+
+
+
+@media screen and (max-width: 768px)  {
+ 
+  .vue-form{
+    padding: 0 1rem;
+    width: 90% !important;
+    margin-bottom: 5rem;
+  }
+  .error-div{
+    flex-direction: column;
+    align-items: center;
+  }
+  .error-text{
+    margin-top: -3rem !important;
+  }
+  .error-div img{
+  position: relative;
+  top: -3rem;
+  }
+  
+  
+}
+
+
+
+.vue-form div {
+  position: relative;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  
+}
+.vue-form h4,
+
+.vue-form label {
+  margin-bottom: .3rem;
+  font-weight: 600;
+}
+.vue-form input,
+.vue-form textarea,
+.vue-form select,
+.vue-form label {
+  color: $secondary;
+}
+.vue-form input[type="text"],
+.vue-form input[type="email"],
+.vue-form textarea,
+.vue-form select,
+.vue-form legend {
+  display: block;
+  width: 100%;
+  appearance: none;
+  
+}
+.vue-form input[type="text"],
+.vue-form input[type="email"],
+.vue-form textarea,
+.vue-form select {
+  padding: 12px;
+  border: 1px solid #cfd9db;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 0.25em;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08);
+}
+.vue-form input[type="text"]:focus,
+.vue-form input[type="email"]:focus,
+.vue-form textarea:focus,
+.vue-form select:focus {
+  box-shadow: 0 0 5px rgba($secondary, 0.2);
+  outline: none;
+  background-color: rgba(101, 243, 248, 0.6);
+  box-shadow: 0px 0px 18px rgba(89, 210, 214, 0.6);
+  width: 100%;
+}
+.vue-form .select {
+  position: relative;
+}
+
+.vue-form select {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+}
+.vue-form select::-ms-expand {
+  display: none;
+}
+.vue-form .vue-form-list {
+  margin-top: 16px;
+}
+.vue-form .vue-form-list::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.vue-form .vue-form-list li {
+  display: inline-block;
+  position: relative;
+  user-select: none;
+  margin: 0 26px 16px 0;
+  /* float: left; */
+}
+.vue-form input[type="radio"] + label::before,
+.vue-form input[type="radio"] + label::after,
+.vue-form input[type="checkbox"] + label::before,
+.vue-form input[type="checkbox"] + label::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -8px;
+  width: 16px;
+  height: 16px;
+}
+
+
+.vue-form textarea {
+  min-height: 120px;
+  resize: vertical;
+  overflow: auto;
+}
+.vue-form input[type="submit"] {
+  border: none;
+  background: #2c3e50;
+  border-radius: 0.25em;
+  padding: 12px 20px;
+  color: #ffffff;
+  font-weight: bold;
+  float: right;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  appearance: none;
+}
+.no-touch .vue-form input[type="submit"]:hover {
+  background: #42a2e1;
+}
+.vue-form input[type="submit"]:focus {
+  outline: none;
+  background: #2b3e51;
+}
+.vue-form input[type="submit"]:active {
+  transform: scale(0.9);
+}
+.vue-form .error-message {
+  height: 35px;
+  margin: 0px;
+}
+.vue-form .error-message p {
+  background: #e94b35;
+  color: #ffffff;
+  font-size: 1.4rem;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border-radius: 0.25em;
+  padding: 16px;
+}
+.vue-form .error {
+  border-color: #e94b35 !important;
+}
+
+
+
+@-webkit-keyframes cd-bounce {
+  0%,
+  100% {
+    -webkit-transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.8);
+  }
+}
+@-moz-keyframes cd-bounce {
+  0%,
+  100% {
+    -moz-transform: scale(1);
+  }
+  50% {
+    -moz-transform: scale(0.8);
+  }
+}
+@keyframes cd-bounce {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+}
+
+</style>

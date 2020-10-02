@@ -75,11 +75,10 @@ html{
 
 body {
   background: white;
-}
-
-html{
   overflow-x: hidden;
 }
+
+
 #app {
   //position: absolute;
   z-index: 0;
@@ -110,6 +109,7 @@ main{
   width: 100vw;
   margin-inline-start: auto;
   margin-inline-end: auto;
+  overflow: hidden;
     
 }
 

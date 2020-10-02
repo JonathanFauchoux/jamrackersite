@@ -28,6 +28,9 @@ $primary    : #159EDE;
 $secondary  : #606060;
 
   .footer{
+    @media screen and (max-width: 767px){
+    width: 90vw;
+  }
      position: relative;
     // bottom:-1px;
     // left: 0; 
