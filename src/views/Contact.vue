@@ -198,6 +198,9 @@ figure .caption {
 }
 
 .front .caption:before {
+  @media screen and (max-width: 768px){
+  display: none;
+  }
   position: absolute;
   top: 0;
   left: 0;
@@ -212,6 +215,7 @@ figure .caption {
 
 
 .front:hover .caption:before{
+  
   opacity: 1;
   transform: translate3d(0,0,0);
 }
