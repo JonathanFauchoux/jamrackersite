@@ -48,10 +48,9 @@ export default {
     },
     updateDataForm(form){
       this.dataForm = form
-      console.log("dataform",this.dataForm)
     }
   },
-  mounted(){
+  beforeMount(){
    window.scroll(0,0)      
   }
 };

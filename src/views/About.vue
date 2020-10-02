@@ -67,6 +67,9 @@ export default {
       teamMates: dataAbout
     };
   },
+  beforeMount(){
+   window.scroll(0,0)      
+  }
 };
 </script>
 
