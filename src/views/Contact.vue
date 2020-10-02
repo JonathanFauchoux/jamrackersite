@@ -79,6 +79,9 @@ export default {
     padding-bottom: 1.5rem;
   }
   p{
+    @media screen and (max-width: 767px){
+      font-size: 1rem;
+    }
     color: $secondary;
     padding: .5rem 0;
     span{
