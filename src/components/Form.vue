@@ -24,6 +24,14 @@
                 </div> 
             </div>
         </form> 
+        <div v-if="errors.length" class="error-div">
+          <div class="error-text">
+            <h4>Merci de bien vouloir corriger:</h4>
+            <ul>
+              <li class="error-message" v-for="error in errors" :key="error">{{ error }}</li>
+            </ul>
+          </div>
+        </div>  
         
 
 </div>
@@ -33,12 +41,14 @@
 <script>
 
 export default {
+  
   name: 'Form',
   components: {
 
   },
   data() {
     return {
+      errors: [],
       Form: {},
       name: null,
       email: null,
@@ -49,7 +59,18 @@ export default {
   },
   methods:{
     retoggle(){
-      let card = document.querySelector('.card') 
+      this.errors = [];
+      if(!this.name) this.errors.push("Nom requis.");
+      if(!this.email) {
+        this.errors.push("Email requis.");
+      } else if(!this.validEmail(this.email)) {
+        this.errors.push("Email correct requis.");        
+      }
+      if(!this.message) this.errors.push("message requis.");
+
+      if(!this.errors.length && this.email !== "" && this.name!== "" && this.message!== "") {
+      
+       let card = document.querySelector('.card') 
       card.classList.remove('flipped')
       this.Form = {
         name: this.name,
@@ -58,8 +79,22 @@ export default {
         message: this.message,
       }
       this.$emit('updateDataForm',this.Form)
+        
+      } 
+      
 
-      console.log('Form', this.dataForm)
+      //console.log('Form', this.dataForm)
+    },
+  validEmail:function(email) {
+      var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@(([[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+    }
+  } ,
+  
+  watch: {
+    // watching nested property
+    "email.value": function(value) {
+      this.validate("email", value);
     }
   }
 }
@@ -70,15 +105,23 @@ export default {
 
 .sendBtn{
   background-color: rgba($primary, 0.7) !important;
+  z-index: 2;
 }
 
 .error-div{
   display: flex;
   justify-content: center;
-}
-.error-div img{
   position: relative;
-  top: -7rem;
+    top: -7rem !important;
+}
+.error-text h4{
+  padding-bottom: 1rem;
+}
+.error-text ul{
+  list-style: none;
+  li{
+    padding: .2rem;
+  }
 }
 .vue-form {
   
@@ -100,14 +143,14 @@ export default {
   .error-div{
     flex-direction: column;
     align-items: center;
+    
   }
   .error-text{
-    margin-top: -3rem !important;
+    margin-top: -2rem !important;
+    position: relative;
+    left: 3rem;
   }
-  .error-div img{
-  position: relative;
-  top: -3rem;
-  }
+  
   
   
 }

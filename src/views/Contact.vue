@@ -50,6 +50,9 @@ export default {
       this.dataForm = form
     }
   },
+  mounted(){
+    console.log(this.dataForm)
+  },
   beforeMount(){
    window.scroll(0,0)      
   }

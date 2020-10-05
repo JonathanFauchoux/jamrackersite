@@ -4,8 +4,8 @@
       <div class="social-link">
         <p><span>Jam</span>Racker © copyright 2020</p>
         <div>
-        <a href="https://github.com/JonathanFauchoux" target="_blank"><i class="fab fa-github-square"></i></a>
-        <a href="mailto:jonathan.fauchoux@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+        <a href="https://github.com/JonathanFauchoux/jamrackersite" target="_blank"><i class="fab fa-github-square"></i></a>
+        <a href="mailto:jamracker@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
 
         </div>
       </div>
