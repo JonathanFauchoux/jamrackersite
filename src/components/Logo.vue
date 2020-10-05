@@ -247,18 +247,7 @@
 <script>
 export default {
   name: "Footer",
-  components: {},
-  mounted() {
-    setTimeout(() => {
-        if(window.scrollY === 0){
-            window.scrollTo({
-                top: 1000,
-                left: 0,
-                behavior:'smooth' 
-            })
-        }
-    }, 4000);
-  },
+  components: {}
 };
 </script>
 

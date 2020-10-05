@@ -2,16 +2,26 @@
     {
         "title" : "Piano Roll",
         "image" : "https://imagizer.imageshack.com/img922/6885/5GlV21.png",
-        "description" : "loream ipsum in dolor..."
+        "description" : "Capable de jouer et lire des notes sur un piano, d’étirer des notes sur la durée, de les déplacer en Drag & Drop, d’y ajouter des octaves et des gammes différentes et d’enregistrer le morceau ainsi créé dans le module."
     },
     {
         "title" : "Step Sequencer",
         "image" : "https://imagizer.imageshack.com/img924/3204/5bQT1k.png",
-        "description" : "loream ipsum in dolor..."
+        "description" : "Capable de jouer à intervalles réguliers des sons de différents instruments sur des pistes qui s’additionnent, pour aussi les enregistrer."
     },
     {
         "title" : "Sampler",
         "image" : "https://imagizer.imageshack.com/img924/3134/Xxc1GN.png",
-        "description" : "loream ipsum in dolor..."
+        "description" : "Permet d’ajouter des sons spécifiques à la place des notes de musique déterminées, comme des sons de batterie notamment."
+    },
+    {
+        "title" : "Traker",
+        "image" : "https://imagizer.imageshack.com/img924/3134/Xxc1GN.png",
+        "description" : "Grille constituée de pistes verticales dans laquelle nous pouvons disposer les musiques que nous avons créé au préalable. Les musiques sont ensuite lue dans l’ordre en fonction de leur position dans la grille. Pour but d’enregistrer la composition finale des morceaux cumulés."
+    },
+    {
+        "title" : "La librairie",
+        "image" : "https://imagizer.imageshack.com/img924/3134/Xxc1GN.png",
+        "description" : "bibliothèque des sons composés"
     }
 ]
