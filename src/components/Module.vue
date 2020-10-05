@@ -20,25 +20,27 @@ export default {
 <style lang="scss">
 .module {
   overflow: hidden;
-  height: 100vh;
-  width: 100vw;
+  height: 70vh;
+  width: 80vw;
   position: relative;
   background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  // background-repeat: no-repeat;
+  // background-attachment: fixed;
+  // background-position: left center;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-end;
-  margin: 3.5rem 0;
+  margin: 3rem 0 0rem 0;
   div {
     background-color: rgba(255, 255, 255, 0.473);
     box-shadow: 0 0 10px 0 rgb(71, 71, 71);
     padding: 20px;
     border-radius: 5px;
-    height: 50%;
+    // height: 50%;
     width: 50%;
     backdrop-filter: blur(5px);
-    margin-right: 100px;
+    margin-right: 40px;
+    margin-top: 40px;
     h1 {
       position: relative;
       z-index: 10;

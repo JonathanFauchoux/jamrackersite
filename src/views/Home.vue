@@ -7,6 +7,7 @@
     <div class="logo_container">
       <Logo />
     </div>
+      <h1>Description du projet</h1>
     <div class="home_content">
       <div data-aos="fade-down-right">
         <img src="https://cdn.pixabay.com/photo/2015/05/15/14/50/concert-768722_960_720.jpg" alt="">
@@ -40,7 +41,7 @@
         </ul>
       </div>
       <div data-aos="fade-up-left">
-        <img src="https://cdn.pixabay.com/photo/2015/10/24/09/09/studio-1004158_960_720.png" alt="">
+        <img src="https://images.pexels.com/photos/4087996/pexels-photo-4087996.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
         <h3>Technologies utilisées :</h3>
         <ul>
           <li>
@@ -53,6 +54,12 @@
         </ul>
       </div>
     </div>
+    <div class="externButton">
+      <button>Vous inscrire</button>
+      <button>Essayer JamRacker</button>
+      <button>Contactez nous</button>
+    </div>
+    <h1>Les modules</h1>
     <Module :key="d.title" v-for="d in datas" :data="d" />
     <div class="footer_content">
       <h1>Music for all</h1>
@@ -81,7 +88,7 @@ export default {
     setTimeout(() => {
       if (window.scrollY === 0) {
         window.scrollTo({
-          top: 1000,
+          top: 900,
           left: 0,
           behavior: "smooth",
         });
@@ -98,7 +105,7 @@ export default {
     },
     scrollDown() {
       window.scrollTo({
-        top: window.scrollY + 1000,
+        top: window.scrollY + 900,
         left: 0,
         behavior: "smooth",
       });
@@ -109,6 +116,43 @@ export default {
 
 <style lang="scss">
 @import "../assets/main.scss";
+
+.home{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.externButton{
+  width: 100vw;
+  height: 200px;
+  background-color: white;
+  box-shadow: 0 0 10px 0 rgb(214, 214, 214);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 100px 0;
+  button, a{
+    &:nth-child(2){
+      transform: scale(1.5);
+    }
+    background-color: #159EDE;
+    text-decoration: none;
+    margin: 0 100px;
+    padding: 10px 30px;
+    border: none;
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    outline: none;
+    cursor: pointer;
+    &:hover{
+      background-color: #1289c0;
+    }
+  }
+}
+
 .logo_container {
   object-fit: contain;
   height: 100vh;
@@ -132,8 +176,10 @@ export default {
 
 .home_content {
   // height: calc(100vh - 200px);
-  padding: 100px 0%;
+  width: 80vw;
   color: black;
+  padding-top: 40px;
+  padding-bottom: 5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -147,8 +193,8 @@ export default {
   }
 
   div{
-    height: 400px;
-    width: 700px;
+    height: 300px;
+    width: 640px;
     box-shadow: 0 0 10px 0 rgb(201, 201, 201);
     @media (max-width: 640px){
       height: 100%;
@@ -167,18 +213,20 @@ export default {
       top: 0;
       object-fit: cover;
       left: 0;
+      filter: brightness(0.2);
     }
     h1{
       width: 100%;
       margin: 0;
       position: relative;
     }
+
     p, ul, h1, h3{
       color: white;
       position: relative;
       // width: 100%;
-      padding: 20px;
-      background-color: rgba(0, 0, 0, 0.829);
+      padding: 10px 20px 20px 20px;
+      // background-color: rgba(0, 0, 0, 0.829);
     }
     p, li{
       position: relative;
