@@ -103,10 +103,10 @@ body {
 
 main{
   @media screen and (max-width: 767px){
-    width: 90vw;
+    width: 100vw;
   }
   @media screen and (max-width: 1023px) and (min-width: 767px){
-    width: 90vw;
+    width: 100vw;
   }
   width: 100vw;
   margin-inline-start: auto;

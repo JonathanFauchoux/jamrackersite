@@ -177,6 +177,17 @@ export default {
   background-color: white;
   box-shadow: 0 0 10px 0 rgb(214, 214, 214);
   display: flex;
+  flex-wrap: wrap;
+  @media (max-width: 640px){
+    flex-direction: column !important;
+    margin: 0 0 40px 0;
+    a{
+      margin: 10px 0 !important;
+      &:nth-child(2) {
+      transform: scale(1) !important;
+    }
+    }
+  }
   align-items: center;
   justify-content: center;
   margin: 100px 0;
@@ -208,6 +219,9 @@ export default {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  @media (max-width: 640px){
+    transform: scale(0.5);
+  }
 }
 
 .footer_content {
@@ -219,7 +233,7 @@ export default {
   position: relative;
   h1 {
     color: #159ede;
-    font-size: 150px;
+    font-size: 10vw;
     position: relative;
     z-index: 100000;
     text-shadow: 0px 0px 5px rgb(255, 255, 255);
@@ -341,6 +355,9 @@ export default {
   flex-wrap: wrap;
   // grid-template-columns: repeat(2, 1fr);
   gap: 20px;
+  @media (max-width: 640px){
+    width: 100vw;
+  }
 
   h1 {
     color: white;
@@ -353,6 +370,7 @@ export default {
     box-shadow: 0 0 10px 0 rgb(201, 201, 201);
     @media (max-width: 640px) {
       height: 100%;
+      border-radius: 0;
     }
     position: relative;
     overflow: hidden;

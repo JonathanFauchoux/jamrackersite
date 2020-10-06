@@ -27,6 +27,10 @@ export default {
   @media(max-width: 640px){
     width: 100vw;
     margin: 1rem 0 0 0;
+    div{
+      width: 100% !important;
+      margin: 0 !important;
+    }
   }
   // background-repeat: no-repeat;
   // background-attachment: fixed;
