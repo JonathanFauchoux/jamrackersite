@@ -55,9 +55,9 @@
       </div>
     </div>
     <div class="externButton">
-      <button>Vous inscrire</button>
-      <button>Essayer JamRacker</button>
-      <button>Contactez nous</button>
+      <a class="btn --animated" href="https://jam-racker-orcin.vercel.app/login" target="_blank"><span>Vous inscrire</span></a>
+      <a class="btn --animated" href="https://jam-racker-orcin.vercel.app/login" target="_blank"><span>Essayer JamRacker</span></a>
+      <a class="btn --animated" @click="goContact"><span>Contactez nous</span></a>
     </div>
     <h1>Les modules</h1>
     <Module :key="d.title" v-for="d in datas" :data="d" />
@@ -110,6 +110,9 @@ export default {
         behavior: "smooth",
       });
     },
+    goContact(){
+      this.$router.push('/contact')
+    }
   },
 };
 </script>
@@ -133,9 +136,10 @@ export default {
   align-items: center;
   justify-content: center;
   margin: 100px 0;
-  button, a{
+   a{
+
     &:nth-child(2){
-      transform: scale(1.5);
+      transform: scale(1.3);
     }
     background-color: #159EDE;
     text-decoration: none;
@@ -143,7 +147,7 @@ export default {
     padding: 10px 30px;
     border: none;
     color: white;
-    font-size: 20px;
+    font-size: 16.5px;
     text-transform: uppercase;
     outline: none;
     cursor: pointer;

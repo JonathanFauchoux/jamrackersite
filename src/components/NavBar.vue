@@ -134,6 +134,7 @@ export default {
     left:25%;
     transform: scaleX(0) ;
     transition: all 0.5s;
+    top: 2rem;
   }
   .nav-link::after{
     bottom: 0;
@@ -170,7 +171,7 @@ export default {
   align-items: center;
   border-radius: 0 0 0 0;
   transition: all .5s;
-}
+  }
   .logo{
     position: absolute;
     top: .3rem;
@@ -225,6 +226,7 @@ export default {
     background-color: white;
     position: absolute;
     left:0;
+    top: 2rem;
     transform: scaleX(0) ;
     transition: all 0.5s;
   }

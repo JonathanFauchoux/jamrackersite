@@ -20,7 +20,10 @@
                 </div>
                  
                 <div class="">
-                    <button  class="btn btn-info sendBtn" @click.prevent="retoggle">ENVOYER</button>
+                 
+                    <a @click.prevent="retoggle" class="btn --animated">
+		<span>Envoyer</span>
+	</a>
                 </div> 
             </div>
         </form> 
@@ -79,7 +82,10 @@ export default {
         message: this.message,
       }
       this.$emit('updateDataForm',this.Form)
-        
+      this.name=""
+      this.email=""
+      this.subject=""
+      this.message=""
       } 
       
 
@@ -103,16 +109,12 @@ export default {
 <style lang="scss" >
 @import "../assets/main.scss";
 
-.sendBtn{
-  background-color: rgba($primary, 0.7) !important;
-  z-index: 2;
-}
 
 .error-div{
   display: flex;
   justify-content: center;
   position: relative;
-    top: -7rem !important;
+    top: -9.5rem !important;
 }
 .error-text h4{
   padding-bottom: 1rem;
@@ -143,6 +145,9 @@ export default {
   .error-div{
     flex-direction: column;
     align-items: center;
+    position: relative;
+    top : -8.5rem !important;
+    left: 2.5rem;
     
   }
   .error-text{
@@ -323,6 +328,91 @@ export default {
   50% {
     transform: scale(0.8);
   }
+}
+// Btn
+
+:root {
+	--font: 1rem/1.2 "helvetica", sans-serif;
+	--bg-hover: linear-gradient(
+		135deg,
+    #159EDE 0%,
+		#2654e9 20%,
+		#aa95f7 37%,
+		#fff 50%,
+		#fc35ca 66%,
+		#7559ff 72%,
+		#101ee7 100%
+	);
+	--btn-color: #159EDE;
+}
+
+/* formating */
+
+
+/* button */
+.btn {
+	display: table;
+	text-align: center;
+	color: #ffffff;
+	text-decoration: none;
+	position: relative;
+	font: var(--font);
+	font-weight: bold;
+	padding: 12px 40px;
+	background-color: var(--btn-color);
+	overflow: hidden;
+  //margin: 24px;
+  z-index: 2;
+}
+
+.--animated {
+	transition: all 1s;
+}
+
+.--animated span {
+	position: relative;
+	z-index: 9;
+}
+
+.--animated:after {
+	height: 100%;
+	width: 2000px;
+	transition: all 1s;
+	background: var(--bg-hover);
+}
+
+.--animated:before {
+	height: 26px;
+	width: 100%;
+	top: -50px;
+	z-index: 10;
+	opacity: 0;
+	background-color: rgba(255, 255, 255, 0.15);
+}
+
+.--animated:hover:before {
+	top: 0;
+	opacity: 1;
+}
+.--animated:hover:after {
+	left: -1750px;
+}
+.--animated:before,
+a:after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 7;
+	display: block;
+	content: "";
+}
+.--animated:active:before {
+	height: 100%;
+	background-color: rgba(255, 255, 255, 0.8);
+}
+.--animated:active {
+	transform: scale(0.95);
+	transition: all 200ms;
 }
 
 </style>
