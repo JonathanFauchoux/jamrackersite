@@ -24,6 +24,10 @@ export default {
   width: 80vw;
   position: relative;
   background-size: cover;
+  @media(max-width: 640px){
+    width: 100vw;
+    margin: 1rem 0 0 0;
+  }
   // background-repeat: no-repeat;
   // background-attachment: fixed;
   // background-position: left center;
@@ -32,8 +36,8 @@ export default {
   justify-content: flex-end;
   margin: 3rem 0 0rem 0;
   div {
-    background-color: rgba(255, 255, 255, 0.473);
-    box-shadow: 0 0 10px 0 rgb(71, 71, 71);
+    background-color: rgba(0, 0, 0, 0.473);
+    box-shadow: 0 0 10px 0 rgb(20, 20, 20);
     padding: 20px;
     border-radius: 5px;
     // height: 50%;

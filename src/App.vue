@@ -28,8 +28,10 @@ export default {
     window.addEventListener("scroll", () => {
       if (window.scrollY > 0) {
         document.querySelector(".navbar").style.boxShadow = "0 0 10px 0 grey";
+        document.querySelector('.scroll-button-container button').style.display = "block"
       } else {
         document.querySelector(".navbar").style.boxShadow = "none";
+        document.querySelector('.scroll-button-container button').style.display = "none"
       }
     });
   },

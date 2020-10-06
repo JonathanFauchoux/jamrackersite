@@ -2,15 +2,17 @@
   <div class="home">
     <div class="scroll-button-container">
       <button @click="scrollUp"><i class="fas fa-arrow-up"></i></button>
-      <button @click="scrollDown"><i class="fas fa-arrow-down"></i></button>
     </div>
     <div class="logo_container">
       <Logo />
     </div>
-      <h1>Description du projet</h1>
+    <h1>Description du projet</h1>
     <div class="home_content">
       <div data-aos="fade-down-right">
-        <img src="https://cdn.pixabay.com/photo/2015/05/15/14/50/concert-768722_960_720.jpg" alt="">
+        <img
+          src="https://cdn.pixabay.com/photo/2015/05/15/14/50/concert-768722_960_720.jpg"
+          alt=""
+        />
         <h1>JamRacker</h1>
         <p>
           La musique pour tous. <br /><br />
@@ -22,7 +24,10 @@
         </p>
       </div>
       <div data-aos="fade-down-left">
-        <img src="https://cdn.pixabay.com/photo/2019/04/13/22/50/concert-4125832_960_720.jpg" alt="">
+        <img
+          src="https://cdn.pixabay.com/photo/2019/04/13/22/50/concert-4125832_960_720.jpg"
+          alt=""
+        />
         <h3>La demande du client :</h3>
         <p>
           Produire un outil musical capable de jouer des sons de différentes
@@ -30,7 +35,10 @@
         </p>
       </div>
       <div data-aos="fade-up-right">
-        <img src="https://cdn.pixabay.com/photo/2017/10/12/22/08/background-2846165_960_720.jpg" alt="">
+        <img
+          src="https://cdn.pixabay.com/photo/2017/10/12/22/08/background-2846165_960_720.jpg"
+          alt=""
+        />
         <h3>Conditions :</h3>
         <ul>
           <li>
@@ -41,7 +49,10 @@
         </ul>
       </div>
       <div data-aos="fade-up-left">
-        <img src="https://images.pexels.com/photos/4087996/pexels-photo-4087996.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+        <img
+          src="https://images.pexels.com/photos/4087996/pexels-photo-4087996.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+          alt=""
+        />
         <h3>Technologies utilisées :</h3>
         <ul>
           <li>
@@ -55,14 +66,54 @@
       </div>
     </div>
     <div class="externButton">
-      <a class="btn --animated" href="https://jam-racker-orcin.vercel.app/login" target="_blank"><span>Vous inscrire</span></a>
-      <a class="btn --animated" href="https://jam-racker-orcin.vercel.app/login" target="_blank"><span>Essayer JamRacker</span></a>
-      <a class="btn --animated" @click="goContact"><span>Contactez nous</span></a>
+      <a
+        class="btn --animated"
+        href="https://jam-racker-orcin.vercel.app/login"
+        target="_blank"
+        ><span>Vous inscrire</span></a
+      >
+      <a
+        class="btn --animated"
+        href="https://jam-racker-orcin.vercel.app/login"
+        target="_blank"
+        ><span>Essayer JamRacker</span></a
+      >
+      <a class="btn --animated" @click="goContact"
+        ><span>Contactez nous</span></a
+      >
     </div>
     <h1>Les modules</h1>
     <Module :key="d.title" v-for="d in datas" :data="d" />
     <div class="footer_content">
       <h1>Music for all</h1>
+      <div id="spans">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
   </div>
 </template>
@@ -86,7 +137,7 @@ export default {
   },
   mounted() {
     setTimeout(() => {
-      if (window.scrollY === 0) {
+      if (window.scrollY === 0 && this.$route.path === "/") {
         window.scrollTo({
           top: 900,
           left: 0,
@@ -103,16 +154,9 @@ export default {
         behavior: "smooth",
       });
     },
-    scrollDown() {
-      window.scrollTo({
-        top: window.scrollY + 900,
-        left: 0,
-        behavior: "smooth",
-      });
+    goContact() {
+      this.$router.push("/contact");
     },
-    goContact(){
-      this.$router.push('/contact')
-    }
   },
 };
 </script>
@@ -120,14 +164,14 @@ export default {
 <style lang="scss">
 @import "../assets/main.scss";
 
-.home{
+.home {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.externButton{
+.externButton {
   width: 100vw;
   height: 200px;
   background-color: white;
@@ -136,12 +180,11 @@ export default {
   align-items: center;
   justify-content: center;
   margin: 100px 0;
-   a{
-
-    &:nth-child(2){
+  a {
+    &:nth-child(2) {
       transform: scale(1.3);
     }
-    background-color: #159EDE;
+    background-color: #159ede;
     text-decoration: none;
     margin: 0 100px;
     padding: 10px 30px;
@@ -151,7 +194,7 @@ export default {
     text-transform: uppercase;
     outline: none;
     cursor: pointer;
-    &:hover{
+    &:hover {
       background-color: #1289c0;
     }
   }
@@ -170,13 +213,121 @@ export default {
 .footer_content {
   height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
   h1 {
     color: #159ede;
-    font-size: 100px;
+    font-size: 150px;
+    position: relative;
+    z-index: 100000;
+    text-shadow: 0px 0px 5px rgb(255, 255, 255);
   }
 }
+
+/*Music Animation*/
+
+.footer_content {
+
+
+ #spans{
+   position: absolute;
+   bottom: 0;
+   width: 100vw;
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   z-index: 10;
+ }
+
+  span {
+    opacity: 0.2;
+    width: 4vw;
+    height: 50vh;
+    margin-left: 1px;
+    background-color: #acf;
+    display: inline-block;
+    transform-style: preserve-3d;
+    animation: music 1s infinite ease-in alternate-reverse;
+  }
+
+  span:nth-of-type(2),
+  span:nth-of-type(11),
+  span:nth-of-type(19) {
+    animation-delay: 0.2s;
+  }
+
+  span:nth-of-type(3),
+  span:nth-of-type(12),
+  span:nth-of-type(20) {
+    animation-delay: 0.6s;
+  }
+
+  span:nth-of-type(4),
+  span:nth-of-type(13),
+  span:nth-of-type(21) {
+    animation-delay: 0.3s;
+  }
+
+  span:nth-of-type(5),
+  span:nth-of-type(14),
+  span:nth-of-type(22) {
+    animation-delay: 0.7s;
+  }
+
+  span:nth-of-type(6),
+  span:nth-of-type(15),
+  span:nth-of-type(23) {
+    animation-delay: 0.9s;
+  }
+
+  span:nth-of-type(7),
+  span:nth-of-type(16),
+  span:nth-of-type(24) {
+    animation-delay: 1.5s;
+  }
+
+  span:nth-of-type(8),
+  span:nth-of-type(17),
+  span:nth-of-type(25) {
+    animation-delay: 1.2s;
+  }
+
+  span:nth-of-type(9),
+  span:nth-of-type(18) {
+    animation-delay: 1.1s;
+  }
+
+  span:last-of-type {
+    animation-delay: 1.8s;
+  }
+
+  @keyframes music {
+    0% {
+      height: 50px;
+      background-color: #135;
+    }
+
+    25% {
+      height: 75px;
+      /*transform:translateZ(30px);*/
+      background-color: #159ede;
+    }
+
+    50% {
+      height: 100px;
+      background-color: #246;
+    }
+
+    75% {
+      background-color: #135;
+    }
+  }
+}
+
+/*End Music Animation*/
 
 .home_content {
   // height: calc(100vh - 200px);
@@ -191,16 +342,16 @@ export default {
   // grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 
-  h1{
+  h1 {
     color: white;
     padding: 10px;
   }
 
-  div{
+  div {
     height: 300px;
     width: 640px;
     box-shadow: 0 0 10px 0 rgb(201, 201, 201);
-    @media (max-width: 640px){
+    @media (max-width: 640px) {
       height: 100%;
     }
     position: relative;
@@ -210,7 +361,7 @@ export default {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-end;
-    img{
+    img {
       position: absolute;
       width: 100%;
       height: 100%;
@@ -219,20 +370,24 @@ export default {
       left: 0;
       filter: brightness(0.2);
     }
-    h1{
+    h1 {
       width: 100%;
       margin: 0;
       position: relative;
     }
 
-    p, ul, h1, h3{
+    p,
+    ul,
+    h1,
+    h3 {
       color: white;
       position: relative;
       // width: 100%;
       padding: 10px 20px 20px 20px;
       // background-color: rgba(0, 0, 0, 0.829);
     }
-    p, li{
+    p,
+    li {
       position: relative;
       color: white;
       font-size: 20px;
@@ -262,8 +417,8 @@ export default {
 .scroll-button-container {
   position: fixed;
   z-index: 1000;
-  bottom: 50%;
-  left: 40px;
+  bottom: 40px;
+  right: 40px;
   display: flex;
   flex-direction: column;
   button {
@@ -276,8 +431,8 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 10px 0;
     background-color: white;
+    display: none;
     color: #159ede;
     transition: 0.2s;
     &:hover {
