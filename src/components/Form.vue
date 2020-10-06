@@ -3,20 +3,20 @@
   <form  class="vue-form">
             <div>
                 <div >
-                  <label for="name">Name</label>
-                    <input type="text" class="form-control" placeholder="Name" name="name" v-model="name"/>
+                  <label for="name">Nom</label>
+                    <input type="text" class="form-control" placeholder="Nom" name="name" v-model="name"/>
                 </div>
                 <div >
                 <label for="email">Email</label>
                     <input type="email" class="form-control" placeholder="Email" name="email" v-model="email"/>
                 </div>
                 <div class="col-8 form-group pt-2 mx-auto">
-                <label for="subject">Subject</label>
-                    <input type="text" class="form-control" placeholder="Subject" name="subject" v-model="subject"/>
+                <label for="subject">Suject</label>
+                    <input type="text" class="form-control" placeholder="Sujet" name="subject" v-model="subject"/>
                 </div>
                 <div class="">
                 <label for="message">Message</label>
-                    <textarea class="form-control" id="" cols="30" rows="8" placeholder="Dear Joe, ..." name="message" v-model="message"></textarea>
+                    <textarea class="form-control" id="" cols="30" rows="8" placeholder="Dear Jamracker's team, ..." name="message" v-model="message"></textarea>
                 </div>
                  
                 <div class="">
