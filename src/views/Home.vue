@@ -74,7 +74,7 @@
       >
       <a
         class="btn --animated"
-        href="https://jam-racker-orcin.vercel.app/login"
+        href="https://jam-racker-app.vercel.app/"
         target="_blank"
         ><span>Essayer JamRacker</span></a
       >
