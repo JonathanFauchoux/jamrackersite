@@ -5,7 +5,7 @@
 - Vers le repository Git de l'app: https://github.com/Procaillass/JamRacker
 
 
-##La musique pour tous.
+## La musique pour tous.
 
 Projet de fin de formation professionnelle des développeurs front-end du Cepegra. Ce projet est une mise en situation d’une demande de logiciel musical par un client fictif, représenté par notre formateur Pierre Charlier, et produit avec notre deuxième formateur Olivier Belery.
 
