@@ -78,6 +78,8 @@
         target="_blank"
         ><span>Essayer JamRacker</span></a
       >
+      <a class="btn --animated" href="https://github.com/Procaillass/JamRacker" target="_blank"><span>Github du projet</span></a>
+
       <a class="btn --animated" @click="goContact"
         ><span>Contactez nous</span></a
       >
@@ -173,7 +175,8 @@ export default {
 
 .externButton {
   width: 100vw;
-  height: 200px;
+  height: auto;
+  padding: 40px 0;
   background-color: white;
   box-shadow: 0 0 10px 0 rgb(214, 214, 214);
   display: flex;
@@ -183,18 +186,12 @@ export default {
     margin: 0 0 40px 0;
     a{
       margin: 10px 0 !important;
-      &:nth-child(2) {
-      transform: scale(1) !important;
-    }
     }
   }
   align-items: center;
   justify-content: center;
   margin: 100px 0;
   a {
-    &:nth-child(2) {
-      transform: scale(1.3);
-    }
     background-color: #159ede;
     text-decoration: none;
     margin: 0 100px;

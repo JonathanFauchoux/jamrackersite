@@ -81,7 +81,7 @@ export default {
     padding: 6rem 2rem 5rem 2rem;
   }
   @media screen and (max-width: 767px) {
-    padding: 0;
+    padding: 0 20px;
   }
   position: relative;
   padding-top: 7rem;

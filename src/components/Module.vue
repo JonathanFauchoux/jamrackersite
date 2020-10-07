@@ -24,12 +24,21 @@ export default {
   width: 80vw;
   position: relative;
   background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 10px rgb(219, 219, 219);
+  border-radius: 5px;
   @media(max-width: 640px){
     width: 100vw;
+    height: 100%;
     margin: 1rem 0 0 0;
     div{
       width: 100% !important;
       margin: 0 !important;
+      // height: 100% !important;
+      background-color: rgba(0, 0, 0, 0.815) !important;
+      *{
+        color: white !important;
+      }
     }
   }
   // background-repeat: no-repeat;
@@ -40,24 +49,21 @@ export default {
   justify-content: flex-end;
   margin: 3rem 0 0rem 0;
   div {
-    background-color: rgba(0, 0, 0, 0.473);
-    box-shadow: 0 0 10px 0 rgb(20, 20, 20);
+    background-color: rgb(255, 255, 255);
     padding: 20px;
-    border-radius: 5px;
+    // border-radius: 5px;
+    box-shadow: 0 0 10px rgb(160, 160, 160);
     // height: 50%;
-    width: 50%;
-    backdrop-filter: blur(5px);
-    margin-right: 40px;
-    margin-top: 40px;
+    width: 100%;
     h1 {
       position: relative;
       z-index: 10;
-      color: rgb(255, 255, 255);
+      color: rgb(0, 0, 0);
     }
     p {
       position: relative;
       z-index: 10;
-      color:  rgb(255, 255, 255);
+      color:  rgb(0, 0, 0);
     }
   }
 }

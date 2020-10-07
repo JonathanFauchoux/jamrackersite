@@ -110,8 +110,8 @@ export default {
     padding: 6rem 2rem 5rem 2rem;
   }
   @media screen and (max-width: 767px) {
-    padding: 0;
-    margin-left: 0 !important;
+    padding: 0 25px;
+    margin: 0 !important;
   }
   position: relative;
   perspective:1000;
