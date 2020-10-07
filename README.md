@@ -1,8 +1,8 @@
 # JamRacker
 
-Vers le site :  https://jamrackersite.vercel.app/
-Vers l'app : https://jam-racker-app.vercel.app/
-Vers le repository Git de l'app: https://github.com/Procaillass/JamRacker
+- Vers le site :  https://jamrackersite.vercel.app/
+- Vers l'app : https://jam-racker-app.vercel.app/
+- Vers le repository Git de l'app: https://github.com/Procaillass/JamRacker
 
 
 ##La musique pour tous.
